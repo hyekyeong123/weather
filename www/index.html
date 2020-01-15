@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+                                                                        <!-- //줌인 줌아웃안되게 -->
+    <meta name='author' content='hye kyeong Jeong'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>날씨 알리미</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/all.css">
+    <script src="script/jquery-3.4.1.min.js"></script>
+    <script src="script/bootstrap.js"></script>
+    <script src="script/all.js"></script>
+</head>
+<body>
+    <header>
+        <div id="hdbar" class="navbar">
+            <div class="col-6">
+                <h4 class="navbar-brand">
+                    <img id="header_logo" src="images/logo.png" alt="날씨 알리미 로고">
+                    날씨 알리미
+                </h4>
+            </div>
+<!------------------------------------------------------------------->
+            <div class="dropdown col-6 text-right">
+                <button type="button dropdown-toggle" class="btn btn-sm btn-primary"
+                type="button" id="locbtn" data-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="true">
+                    Location
+                    <i class="fas fa-caret-down"></i>
+                    <div class="dropdown-menu" aria-labelledby="locbtn">
+                        <a href="#" class="dropdown-item citybtn" data="Seoul">서울</a>
+                        <a href="#" class="dropdown-item citybtn" data="Daejeon">대전</a>
+                        <a href="#" class="dropdown-item citybtn" data="Daegu">대구</a>
+                        <a href="#" class="dropdown-item citybtn" data="Busan">부산</a>
+                        <a href="#" class="dropdown-item citybtn" data="London">런던</a>
+                        <a href="#" class="dropdown-item citybtn" data="
+                        New York">뉴욕</a>
+                        
+                         <a herf='#' class="dropdown-item citybtn" data="custom">
+                            <i class="fas fa-map-marker-alt">
+                            </i>
+                                사용자 위치
+                            </a>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+<!-------------------------------------------------------------------->
+    <section>
+       <div id="top">
+           <div>
+                <p id="date">
+                    <script>
+                        var now = new Date();
+                        var year = now.getFullYear(); //yyyy형식
+                        var month = now.getMonth() + 1; //우리나라는 1월부터 시작이니까(컴퓨터는 0부터)
+                        var date = now.getDate(); //day는 요일임
+                        $("#date").text(year+"년"+month+"월"+date+"일");                        
+                    </script>
+                </p>
+               <p id="city" >
+                   
+                </p>
+                <i id="icon" class="fas fa-cloud-rain"></i>
+                <p id="info">진눈깨비 내리다 그침</p>
+            </div>
+       </div>
+<!-------------------------------------------------------------------->
+       <div id="midbot">
+           <div id="mid" class="row">
+               <div class="col-4 etc">
+
+                   <i id="dir" class="fas fa-arrow-alt-circle-up"></i>
+                   <span id="speed"></span>
+                   <br>
+
+                   <i class="fas fa-tint"></i>
+                   <span id="hum"></span>
+                </div>
+
+                <div class="col-4 temp">
+                    <!-- 온도 -->
+                </div>
+                
+                <div class="col-4 minmax">
+                    <i class="fas fa-arrow-up"></i>
+                    <span id="max">26</span>
+
+                    <br>
+
+                    <i class="fas fa-arrow-down"></i>
+                    <span id="min">-12</span>
+                </div>
+
+            </div>
+<!-------------------------------------------------------------------->
+            <div id="bot">
+                <div class="fc">
+                    <span class="fdate"></span><br>
+                    <i class="fas fa-cloud"></i><br>
+                    <span class="ftemp"></span>
+                </div>
+                <div class="fc">
+                <span class="fdate"></span><br>
+                <i class="fas fa-cloud"></i><br>
+                <span class="ftemp"></span>
+            </div>
+            <div class="fc">
+                <span class="fdate"></span><br>
+                <i class="fas fa-cloud"></i><br>
+                <span class="ftemp"></span>
+            </div>
+            <div class="fc">
+                <span class="fdate"></span><br>
+                <i class="fas fa-cloud"></i><br>
+                <span class="ftemp"></span>
+            </div>
+            <div class="fc">
+                <span class="fdate"></span><br>
+                <i class="fas fa-cloud"></i><br>
+                <span class="ftemp"></span>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

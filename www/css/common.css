@@ -1,0 +1,126 @@
+@charset "utf-8";
+#hdbar{
+    background-color: white;
+    border-bottom:1px solid #efefef;
+}
+#header_logo{
+    width: 30px;
+    height: 30px;
+}
+section{
+    background-color: white;
+    overflow: auto;
+    background-image: url(../images/day_clear.jpg);
+    background-size: cover;
+    background-position: center;  
+    color:white;
+    text-shadow: 0.02em 0.02em 0.5em rgba(0, 0, 0, 0.6);   
+}
+#mid{
+    height: 110px;
+    border-top:1px solid rgba(255,255,255,0.4);
+}
+#bot{
+    height: 110px;
+    border-top:1px solid rgba(255,255,255,0.4);
+}
+#top{
+    position: relative;
+   
+}
+#top>div{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+    padding:0 0.5em;
+}
+#city{
+    font-size: 2.3em;
+}
+#top>div>svg{
+    font-size: 6em;
+}
+#date{
+    margin-bottom: 0.2em;
+}
+#info{
+    margin-top:1em;
+}
+.stext{
+    font-size:1.8em !important;
+}
+.temp{
+    font-size:2.4em;
+    text-align: center;
+    line-height: 110px;
+    padding:0!important;
+}
+.temp::after{
+    content: "\2103";
+    font-size:0.7em;
+}
+.row{
+    margin:0!important;
+    width: 100%;
+}
+#speed::after{
+    content:"m/s";
+    margin-left: -0.07em;
+    font-size:0.7em;
+}
+#hum::after{
+    content:"%";
+    margin-left: -0.05;
+    font-size:0.8em;
+}
+.etc,
+.minmax{
+    font-size:1.3em;
+    text-align: center;
+    padding-top:1em;
+    padding-left:0 !important;
+    padding-right:0!important;
+}
+
+#max::after,
+#min::after{
+    content: "\2103";
+    font-size:0.7em;
+}
+.minmax svg:first-of-type{
+    border-top:3px solid white;
+}
+.minmax svg:last-of-type{
+    border-bottom:3px solid white;
+}
+.fc{
+    float: left;
+    width:20%;
+    text-align: center;
+    padding-top:1em;
+}
+.fc svg{
+    font-size:1.5em;
+}
+.ftemp::after{
+    content: "\2103";
+}
+@media all and (orientation:landscape){
+    #hdbar{
+        height: 60px;
+    }
+    #top{
+        float: left;
+        width: 40%;
+        height: calc(100vh - 60px)!important;
+    }
+    #midbot{
+        float: left;
+        width: 60%;
+        
+    }
+
+}
